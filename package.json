@@ -20,7 +20,8 @@
     "lint": "eslint -c .eslintrc.json --ext .js,jsx ./src",
     "lint:fix": "npm run lint -- --fix",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -49,6 +50,7 @@
     "cypress": "^11.1.0",
     "eslint-config-airbnb": "^19.0.4",
     "prop-types": "^15.8.1",
-    "webpack": "^5.75.0"
+    "webpack": "^5.75.0",
+    "husky": "^8.0.0"
   }
 }
