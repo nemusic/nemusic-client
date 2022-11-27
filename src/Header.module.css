@@ -1,0 +1,53 @@
+
+.logo_text{
+    color: hsl(0, 0%, 100%);
+    font-size: 48px;
+}
+
+.nav__item{
+    color: hsl(0, 0%, 100%);
+}
+
+.nav__link{
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+
+.header__logo,
+.nav__container,
+.my_accaunt{
+    display: inline-block;
+    color:hsl(0, 0%, 100%);
+}
+
+.account__img{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+
+.logo_icon{
+    width: 56px;
+    height: 56px;
+}
+
+.account__name,
+.account__img{
+    vertical-align: middle;
+}
+
+.logo_icon,.logo_text{
+    vertical-align: middle;
+}
+
+.account__name{
+    margin-right: 11px;
+    font-size: 20px;
+}
+
+.my_accaunt{
+    padding: 15px;
+    height: 83px;
+    float: right;
+}

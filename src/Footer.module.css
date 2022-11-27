@@ -1,0 +1,37 @@
+
+.contacts__title,
+.info__title{
+    color: rgba(255, 255, 255, 100%);
+}
+
+.contact__item{
+    list-style-type: none;
+}
+
+.contact__item,
+.info__text{
+    color: rgba(201, 201, 201, 100%);
+    font-size: 16px;
+    text-align: start;
+}
+
+.logo,
+.contacts,
+.info{
+    display: inline-block;
+}
+
+.logo_icon{
+    height: 50px;
+}
+
+.logo{
+    vertical-align:bottom;
+    margin-bottom: 40px;
+}
+
+.info,
+.contacts{
+    vertical-align: text-top;
+    width: 285px;
+}

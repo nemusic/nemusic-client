@@ -15,7 +15,8 @@
       }],
       "prefer-const": "warn",
       "react/jsx-one-expression-per-line": "off",
-      "linebreak-style": "off"
+      "linebreak-style": "off",
+      "react/prop-types": "off"
     },
     "overrides": [
       {
