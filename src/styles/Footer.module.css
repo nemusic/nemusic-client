@@ -1,0 +1,43 @@
+.flex_container{
+    border-top: 1px solid white;
+    display: flex;
+    height: 175px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    margin-right: 50px;
+}
+
+.contacts,
+.info{
+    margin-top: 20px;
+    width: 285px;
+    min-width: 285px;
+    max-width: 285px;
+}
+
+.contacts{
+    margin-right: auto;
+}
+
+.contacts_title{
+    text-align: center;
+}
+
+.info_title{
+    text-align: center;
+}
+
+.info_text{
+    color: rgb(201, 201, 201);
+    margin-top: 20px;
+}
+
+.contacts_list{
+    color: rgb(201, 201, 201);
+    margin-top: 20px;
+    list-style: none;
+}

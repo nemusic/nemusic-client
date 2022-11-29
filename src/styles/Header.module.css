@@ -1,0 +1,75 @@
+.nav_item{
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 80px;
+    border-bottom: 1px solid white;
+}
+
+.nav_link{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.nav_list{
+    margin-left: auto;
+    margin-right: 150px;
+}
+
+.logo{
+    margin-left: 15px;
+    height: 56px;
+}
+
+.logo_icon,
+.logo_text{
+
+    vertical-align: middle;
+}
+
+.logo_icon{
+    max-width: 48px;
+    max-height: 48px;
+    margin-right: 20px;
+}
+
+.acc_photo{
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+}
+
+.acc_name,
+.acc_photo{
+    vertical-align: middle;
+}
+
+.flex_container{
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.logo_icon{
+    width: 56px;
+    height: 56px;
+}
+
+.my_account{
+    margin-right: 10px;
+}
+
+.acc_name{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.logo_text{
+    font-size: 48px;
+}
+
+@media screen and (max-width: 1060px) {
+    .nav_list{
+        margin-left: 80px;
+        margin-right: auto;
+    }
+}
