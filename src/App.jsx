@@ -2,21 +2,17 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Collections from './pages/CollectionsPage';
-import Profile from './pages/ProfilePage';
+import CollectionsPage from './pages/CollectionsPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header name="abobaaaaa" userAvatar="https://i.ibb.co/0jwh2XB/profile-img.png" />
         <Routes>
-          <Route path="/collections" element={<Collections />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/collections" element={<CollectionsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   );

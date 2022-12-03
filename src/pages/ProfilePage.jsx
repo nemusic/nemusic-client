@@ -1,11 +1,15 @@
 import React from 'react';
 
-function Profile() {
+import Page from './Page';
+
+function ProfilePage() {
   return (
-    <div>
-      hello, this is Profile page
-    </div>
+    <Page>
+      <div>
+        hello, this is Profile page
+      </div>
+    </Page>
   );
 }
 
-export default Profile;
+export default ProfilePage;

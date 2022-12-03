@@ -1,11 +1,15 @@
 import React from 'react';
 
-function Collections() {
+import Page from './Page';
+
+function CollectionsPage() {
   return (
-    <div>
-      hello, this is Collections page
-    </div>
+    <Page>
+      <div>
+        hello, this is Collections page
+      </div>
+    </Page>
   );
 }
 
-export default Collections;
+export default CollectionsPage;
