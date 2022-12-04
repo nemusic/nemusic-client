@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import Collections from './pages/CollectionsPage';
 import Profile from './pages/ProfilePage';
 
+import UltraPlayer from './components/UltraPlayer';
+
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +18,7 @@ function App() {
           <Route path="/collections" element={<Collections />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
+        <UltraPlayer />
         <Footer />
       </div>
     </BrowserRouter>
