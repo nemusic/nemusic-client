@@ -1,0 +1,47 @@
+.track {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.track > img {
+    height: 100%;
+}
+
+.meta_data {
+    width: 205px;
+    padding-left: 22px;
+}
+
+.track_title {
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.author {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    color: #C9C9C9;
+}
+
+.album_title {
+    width: 183px;
+    padding-left: 405px;
+}
+
+.track > svg {
+    padding-left: 174px;
+}
+
+.duration {
+    width: 89px;
+    padding-left: 31px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
