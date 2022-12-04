@@ -9,9 +9,27 @@
     height: 100%;
 }
 
+.play_button {
+    position: absolute;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    backdrop-filter: brightness(50%);
+    opacity: 0;
+}
+
+.play_button > svg {
+    font-size: 46px;
+}
+
+.play_button:hover {
+    opacity: 1;
+}
+
 .meta_data {
     width: 205px;
-    padding-left: 22px;
+    margin-left: 22px;
 }
 
 .track_title {
@@ -27,18 +45,26 @@
     color: #C9C9C9;
 }
 
+.author:hover {
+    text-decoration: underline;
+}
+
 .album_title {
     width: 183px;
     padding-left: 405px;
 }
 
+.album_title:hover {
+    text-decoration: underline;
+}
+
 .favorite_icon {
-    padding-left: 174px;
+    margin-left: 174px;
 }
 
 .duration {
     width: 89px;
-    padding-left: 31px;
+    margin-left: 31px;
 }
 
 a {
