@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FavoriteIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteFilledIcon from '@mui/icons-material/Favorite';
 
@@ -7,7 +7,8 @@ import classes from '../styles/Track.module.css';
 function Track({
   title, author, authorUrl, albumTitle, albumCoverUrl, albumUrl, duration, isFavorite
 }) {
-  const favoriteIcon = isFavorite ? <FavoriteFilledIcon /> : <FavoriteIcon />;
+  const [favoriteState, setFavoriteState] = useState(isFavorite);
+  const favoriteIcon = favoriteState ? <FavoriteFilledIcon /> : <FavoriteIcon />;
   return (
     <div className={classes.track}>
       <img src={albumCoverUrl} alt="" />
@@ -22,7 +23,9 @@ function Track({
       <div className={classes.album_title}>
         <a href={albumUrl}>{albumTitle}</a>
       </div>
-      {favoriteIcon}
+      <div className={classes.favorite_icon} onClick={() => setFavoriteState((prev) => !prev)}>
+        {favoriteIcon}
+      </div>
       <div className={classes.duration}>
         {duration}
       </div>
