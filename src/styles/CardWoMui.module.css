@@ -1,0 +1,99 @@
+
+.cardOutline{
+    width: 286px;
+    height: 392px;
+    padding: 1px;
+    border: solid 2px rgba(0,0,0,0);
+    border-radius: 14px;
+    pointer-events: none;
+    transition: border-color 0.15s linear;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #000F1B 0%, #668AA5 99.99%, rgba(0, 0, 0, 0) 100%);
+    max-width: 285px;
+    max-height: 392px;
+    pointer-events: auto;
+}
+
+.cardOutline:hover{
+    border-color: #94ECFF;
+}
+
+.card:hover .imageContainer {
+    transition: 0.3s;
+}
+
+.card:hover .playButton {
+    opacity: 1;
+}
+
+.card:hover .blackBox {
+    background-color: rgba(0,0,0,.4);
+    transition: 0.3s;
+}
+
+.imageContainer {
+    position: relative;
+    width: 285px;
+    height: 285px;
+    border: 0px solid;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.blackBox {
+    position: relative;
+    width: 285px;
+    height: 285px;
+    border: 0px solid;
+    border-radius: 12px 12px 0px 0px;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.playButton {
+    opacity: 0;
+    position: absolute; 
+    padding-left: 115px;
+    padding-right: 0px;
+    padding-top: 115px;
+    padding-bottom: 0px;
+}
+
+.container {
+    width: 285px;
+    height: 107px;
+    padding-left: 9px;
+}
+
+b{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 0px;
+
+    /* white */
+
+    color: #FFFFFF;
+
+
+}
+
+p{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 10px;
+    align-items: center;
+
+    /* white */
+
+    color: #FFFFFF;
+
+}
