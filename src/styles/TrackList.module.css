@@ -1,0 +1,24 @@
+.track_list {
+    width: 1200px;
+    margin: auto;
+}
+
+.header {
+    height: 50px;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.track {
+    width: 214px;
+}
+
+.album {
+    width: 285px;
+    padding-left: 492px;
+}
+
+.duration {
+    padding-left: 123px;
+}

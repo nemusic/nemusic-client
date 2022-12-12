@@ -1,13 +1,14 @@
 import React from 'react';
 
+import TrackList from '../components/TrackList';
+import tracks from '../helpers/TrackExamples';
+
 import Page from './Page';
 
 function Home() {
   return (
     <Page>
-      <div>
-        hello, this is Home page
-      </div>
+      <TrackList tracks={tracks} />
     </Page>
   );
 }
