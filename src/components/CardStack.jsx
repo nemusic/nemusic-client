@@ -3,17 +3,14 @@ import { Stack } from '@mui/system';
 
 import classes from '../styles/CardStack.module.css';
 
-import CardSamples from '../samples/CardSamples';
-
 import CardWoMui from './CardWoMui';
 import NewPlaylist from './NewPlaylist';
 
-function CardStack() {
-  const CardNewStack = CardSamples.slice(0, 3);
+function CardStack({ cards }) {
   return (
     <div className={classes.stackContainer}>
       <Stack direction="row" spacing="20px" sx={{ flexWrap: 'wrap' }}>
-        {CardNewStack.map((cardInstance) => (
+        {cards.map((cardInstance) => (
           <CardWoMui
             title={cardInstance.title}
             description={cardInstance.description}
