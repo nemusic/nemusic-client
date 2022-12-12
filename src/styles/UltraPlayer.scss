@@ -1,0 +1,13 @@
+$rhap_theme-color: white !default;   // Color of all buttons and volume/progress indicators
+$rhap_background-color: #1E2F3C !default; // Color of the player background
+$rhap_bar-color: #668AA5 !default;     // Color of volume and progress bar
+$rhap_time-color: white !default;
+
+.rhap_container{
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    background: linear-gradient(180deg,#1E2F3C 60%, #000 100%);
+}
+
+@import '../../node_modules/react-h5-audio-player/src/styles.scss';
