@@ -1,4 +1,4 @@
-const TrackExamples = [
+const TrackSamples = [
   {
     title: 'Track 1',
     author: 'Author 1',
@@ -31,4 +31,4 @@ const TrackExamples = [
   }
 ];
 
-export default TrackExamples;
+export default TrackSamples;

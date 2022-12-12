@@ -1,7 +1,7 @@
 import React from 'react';
 
 import TrackList from '../components/TrackList';
-import tracks from '../helpers/TrackExamples';
+import tracks from '../samples/TrackSamples';
 
 import Page from './Page';
 
