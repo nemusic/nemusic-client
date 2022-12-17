@@ -1,0 +1,30 @@
+.flex_container{
+  display: flex;
+  align-items: center;
+  height: 360px;
+  border-bottom: 1px solid white;
+}
+
+.cover {
+  margin-right: 60px;
+}
+
+.cover_image {
+  border-radius: 50%;
+}
+
+.title{
+  font-size: 40px;
+}
+
+.description {
+  font-size: 36px;
+  color: rgb(201, 201, 201);
+}
+
+.edit_button {
+  margin-left: auto;
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
