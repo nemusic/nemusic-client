@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import CollectionsPage from './pages/CollectionsPage';
 import ProfilePage from './pages/ProfilePage';
 import PlaylistPage from './pages/PlaylistPage';
+import EditPlaylistPage from './pages/EditPlaylistPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/collections" element={<CollectionsPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/playlist" element={<PlaylistPage />} />
+          <Route path="/edit" element={<EditPlaylistPage />} />
         </Routes>
       </div>
     </BrowserRouter>
