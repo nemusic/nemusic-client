@@ -16,7 +16,7 @@ const CardSamples = [
   },
   {
     title: 'Зима',
-    description: 'длится 20 минут',
+    description: 'длится 20 минут треков',
     cover: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/fca93b7f-a075-4060-a564-b4f61467f8be/Rectangle_1_%283%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221207%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221207T202419Z&X-Amz-Expires=86400&X-Amz-Signature=6ae28f2b8c30d7f2ffd38a49dd0d1a367da59ce04d8f6736930d50ce4385be81&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rectangle%25201%2520%283%29.png%22&x-id=GetObject'
   },
   {
@@ -36,7 +36,7 @@ const CardSamples = [
   },
   {
     title: 'НГ 2024',
-    description: 'длится 20 минут',
+    description: 'длится 20 минут треков',
     cover: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/444b5ed5-37e1-4c30-897a-97c624d18b35/Rectangle_1_%287%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221207%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221207T214308Z&X-Amz-Expires=86400&X-Amz-Signature=a23dfb20a258b90a2c0be763e79afcc6873a06fad2a01750e687a4f713ffb2cb&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rectangle%25201%2520%287%29.png%22&x-id=GetObject'
   },
   {
@@ -46,7 +46,7 @@ const CardSamples = [
   },
   {
     title: 'Супер',
-    description: 'я люблю какать',
+    description: '30 треков',
     cover: 'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/79be2d65-8d86-43b5-a64a-71cb3d83f657/Rectangle_1_%289%29.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221207%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221207T214318Z&X-Amz-Expires=86400&X-Amz-Signature=fa9e5fa8790b89910856bb8dce0e2c8edc142ad2671e8f195c0f70d39ba4333d&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rectangle%25201%2520%289%29.png%22&x-id=GetObject'
   }
 ];

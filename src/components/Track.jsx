@@ -10,15 +10,15 @@ function Track({
   title, author, authorUrl, albumTitle, albumCoverUrl, albumUrl, duration, isFavorite
 }) {
   const [favoriteState, setFavoriteState] = useState(isFavorite);
-  const favoriteIcon = favoriteState ? <FavoriteFilledIcon /> : <FavoriteIcon />;
+  const favoriteIcon = favoriteState ? <FavoriteFilledIcon title="inFavorite" /> : <FavoriteIcon title="notInFavorite" />;
 
   const [playing, setPlaying] = useState(false);
-  const playIcon = playing ? <PauseIcon /> : <PlayingIcon />;
+  const playIcon = playing ? <PauseIcon title="playing" /> : <PlayingIcon title="paused" />;
 
   return (
     <div className={classes.track}>
       <img src={albumCoverUrl} alt="" />
-      <div className={classes.play_button} onClick={() => setPlaying((prev) => !prev)}>
+      <div className={classes.play_button} onClick={() => setPlaying((prev) => !prev)} title="playButton">
         {playIcon}
       </div>
 
@@ -35,7 +35,7 @@ function Track({
         <a href={albumUrl}>{albumTitle}</a>
       </div>
 
-      <div className={classes.favorite_icon} onClick={() => setFavoriteState((prev) => !prev)}>
+      <div className={classes.favorite_icon} onClick={() => setFavoriteState((prev) => !prev)} title="addToFavorite">
         {favoriteIcon}
       </div>
 
