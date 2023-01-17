@@ -20,12 +20,13 @@ function TrackList({ tracks }) {
       </div>
       {tracks.map((track) => (
         <Track
+          id={track.id}
           title={track.title}
-          author={track.author}
-          authorUrl={track.authorUrl}
-          albumTitle={track.albumTitle}
-          albumUrl={track.albumUrl}
-          albumCoverUrl={track.albumCoverUrl}
+          authorName={track.author_name}
+          // authorUrl=
+          album={track.album}
+          cover={track.cover}
+          media={track.media}
           duration={track.duration}
           isFavorite={track.isFavorite}
         />

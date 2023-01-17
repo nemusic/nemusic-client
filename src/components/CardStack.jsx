@@ -13,6 +13,7 @@ function CardStack({ cards, writable }) {
         {cards.map((cardInstance) => (
           <Grid item xs={3}>
             <CardWoMui
+              id={cardInstance.id}
               title={cardInstance.title}
               description={cardInstance.description}
               cover={cardInstance.cover}
