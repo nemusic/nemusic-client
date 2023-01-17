@@ -12,7 +12,7 @@ function Home() {
   return (
     <Page>
       <h1>Настроение</h1>
-      <CardStack cards={cards.slice(0, 3)} />
+      <CardStack cards={cards.slice(0, 4)} />
       <h1>Популярное</h1>
       <TrackList tracks={tracks} />
     </Page>

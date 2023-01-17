@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import classes from '../styles/Header.module.css';
 import Logo from '../resources/main_logo.svg';
@@ -28,8 +29,10 @@ function Header({ name, userAvatar }) {
         </li>
       </ul>
       <div className={`${classes.my_account} ${classes.flex_item}`}>
-        <span className={classes.acc_name}>{name}</span>
-        <img src={userAvatar} alt="" className={classes.acc_photo} />
+        <Link to="/profile">
+          <span className={classes.acc_name}>{name}</span>
+          <img src={userAvatar} alt="" className={classes.acc_photo} />
+        </Link>
       </div>
     </header>
   );
