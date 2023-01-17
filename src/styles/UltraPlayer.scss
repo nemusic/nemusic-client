@@ -3,11 +3,74 @@ $rhap_background-color: #1E2F3C !default; // Color of the player background
 $rhap_bar-color: #668AA5 !default;     // Color of volume and progress bar
 $rhap_time-color: white !default;
 
+@import '../../node_modules/react-h5-audio-player/src/styles.scss';
+
+$ico_svg_color: #668AA5;
+$ico_svg_color_h: white;
+
 .rhap_container{
+    height: 140px;
     position: fixed;
     margin: 0 auto;
     bottom: 0;
     background: linear-gradient(180deg,#1E2F3C 60%, #000 100%);
+    flex-direction: row;
 }
 
-@import '../../node_modules/react-h5-audio-player/src/styles.scss';
+.rhap_main-controls button{
+    color: $ico_svg_color;
+    border-radius: 50%;
+    background-color: none;
+    height: 70px;
+    width: 70px;
+    margin-left: 40px;
+}
+.rhap_main-controls button:hover{
+    color: $ico_svg_color_h;
+}
+
+.rhap_main-controls .rhap_play-pause-button:hover{
+    background-color: white;
+    color: $ico_svg_color;
+}
+
+#player-show-playlist{
+    color: $ico_svg_color;
+    background: none;
+    border: none;
+}
+#player-show-playlist:hover{
+    color: $ico_svg_color_h;
+}
+
+.rhap_header>div{
+    display: flex;
+    flex-direction: row;
+}
+#player-cover{
+    width: 120px;
+    height: 120px;
+}
+#player-cover img{
+    width: 100%;
+}
+
+#player-track-info{
+    padding-left: 20px;
+    width: 200px;
+}
+#player-track-info p{
+    width: 100%;
+    line-height: 40px;
+}
+#player-track-author{
+    margin-bottom: 40px;
+}
+
+.rhap_footer>div{
+    width:300px;
+}
+#player-show-playlist{
+    position: relative;
+    left:220px;
+}
