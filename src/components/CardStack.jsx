@@ -1,24 +1,28 @@
 import React from 'react';
-import { Stack } from '@mui/system';
+import { Grid } from '@mui/material';
 
 import classes from '../styles/CardStack.module.css';
 
 import CardWoMui from './CardWoMui';
 import NewPlaylist from './NewPlaylist';
 
-function CardStack({ cards }) {
+function CardStack({ cards, writable }) {
   return (
     <div className={classes.stackContainer}>
-      <Stack direction="row" spacing="20px" sx={{ flexWrap: 'wrap' }}>
+      <Grid container rowSpacing={6}>
         {cards.map((cardInstance) => (
-          <CardWoMui
-            title={cardInstance.title}
-            description={cardInstance.description}
-            cover={cardInstance.cover}
-          />
+          <Grid item xs={3}>
+            <CardWoMui
+              title={cardInstance.title}
+              description={cardInstance.description}
+              cover={cardInstance.cover}
+            />
+          </Grid>
         ))}
-        <NewPlaylist />
-      </Stack>
+        <Grid item xs={3}>
+          {writable ? NewPlaylist() : ''}
+        </Grid>
+      </Grid>
     </div>
   );
 }
