@@ -1,0 +1,33 @@
+.profile {
+  margin-top: 50px;
+  width: 395px;
+}
+
+.account_name {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.account_description {
+  font-size: 24px;
+  color: rgb(134, 134, 134);
+}
+
+.flex_container {
+  margin-top: 50px;
+  margin-bottom: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  height: 392px;
+  width: 392px;
+}
