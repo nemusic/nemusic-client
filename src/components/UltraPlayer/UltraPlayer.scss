@@ -3,18 +3,42 @@ $rhap_background-color: #1E2F3C !default; // Color of the player background
 $rhap_bar-color: #668AA5 !default;     // Color of volume and progress bar
 $rhap_time-color: white !default;
 
-@import '../../node_modules/react-h5-audio-player/src/styles.scss';
+@import '../../../node_modules/react-h5-audio-player/src/styles.scss';
 
 $ico_svg_color: #668AA5;
 $ico_svg_color_h: white;
 
-.rhap_container{
+
+#player{
+    width: 100%;
     height: 140px;
     position: fixed;
     margin: 0 auto;
     bottom: 0;
     background: linear-gradient(180deg,#1E2F3C 60%, #000 100%);
+    transition: height 400ms ease-out;
+}
+
+#player.shown{
+    background:#204c6b ;
+    height: 500px;
+}
+
+#playlist{
+    display: none;
+}
+
+#player.shown #playlist{
+    display: block;
+}
+
+
+.rhap_container{
+    position: absolute;
+    bottom: -10px;
+    background: none;
     flex-direction: row;
+    box-shadow: none;
 }
 
 .rhap_main-controls button{
@@ -73,4 +97,17 @@ $ico_svg_color_h: white;
 #player-show-playlist{
     position: relative;
     left:220px;
+}
+.track-mini{
+    color: white;
+}
+.track-mini>.mini-play{
+    width: 40px;
+    height: 40px;
+    background: none;
+    border:none;
+    color: #668AA5;
+}
+.track-mini>.mini-play:hover{
+    color:#275A80;
 }
