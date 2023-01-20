@@ -5,7 +5,12 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/src/styles.scss';
 import './UltraPlayer.scss';
 
-import { incremented, decremented, indexSet } from '../../redux_features/player/player-slice';
+import {
+  incremented,
+  decremented,
+  indexSet,
+  trackLikeChanged
+} from '../../redux_features/player/player-slice';
 
 import { ReactComponent as PlayIcon } from '../../resources/play.svg';
 import { ReactComponent as PauseIcon } from '../../resources/pause.svg';
@@ -14,12 +19,15 @@ import { ReactComponent as NextIcon } from '../../resources/next.svg';
 import { ReactComponent as PlayListIcon } from '../../resources/playlist.svg';
 import { ReactComponent as PlayMiniIcon } from '../../resources/play-mini.svg';
 import { ReactComponent as PauseMiniIcon } from '../../resources/pause-mini.svg';
+import { ReactComponent as LikeMiniIcon } from '../../resources/like-mini.svg';
+import { ReactComponent as LikeMiniActiveIcon } from '../../resources/like-mini-active.svg';
 
 function UltraPlayer() {
   const [playListShown, setPlayListShown] = useState(false);
   const currentIndex = useSelector((state) => state.player.currentIndex);
   const playlist = useSelector((state) => state.player.playlist);
   const currentTrack = useSelector((state) => state.player.current);
+  const playlistName = useSelector((state) => state.player.playlistName);
   const audio = document.getElementsByTagName('audio')[0];
   const dispatch = useDispatch();
   const [isPlaying, setIsPlaying] = useState(false);
@@ -58,8 +66,13 @@ function UltraPlayer() {
     setPlayListShown(!playListShown);
   };
 
+  const handleLike = (i) => {
+    dispatch(trackLikeChanged(i));
+  };
+
   return (
     <div id="player">
+      <p>{playlistName}</p>
       <div id="playlist">
         {playlist.map((Track, i) => {
           return (
@@ -68,11 +81,14 @@ function UltraPlayer() {
                 {(i === currentIndex && isPlaying) ? <PauseMiniIcon /> : <PlayMiniIcon />}
               </button>
               <p>{Track.title} - {Track.author}</p>
-              <button type="button">like</button>
+              <button className="mini-like" type="button" onClick={handleLike.bind(this, i)}>
+                {(Track.isFavorite) ? <LikeMiniActiveIcon /> : <LikeMiniIcon />}
+              </button>
               <p>{Track.duration}</p>
             </div>
           );
         })}
+        <div className="track-mini" />
       </div>
       <AudioPlayer
         onEnded={handleClickNext}
