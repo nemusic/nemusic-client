@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+
 import PlayingIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
 import FavoriteIcon from '@mui/icons-material/FavoriteBorder';
@@ -8,18 +10,19 @@ import classes from './Track.module.css';
 
 function Track({
   // eslint-disable-next-line
-  id, title, authorName, authorUrl, album, cover, media, duration, isFavorite
+  id, title, authorName, authorUrl, album, cover, media, duration, isFavorite, onClickPlay
 }) {
   const [favoriteState, setFavoriteState] = useState(isFavorite);
   const favoriteIcon = favoriteState ? <FavoriteFilledIcon title="inFavorite" /> : <FavoriteIcon title="notInFavorite" />;
 
-  const [playing, setPlaying] = useState(false);
-  const playIcon = playing ? <PauseIcon title="playing" /> : <PlayingIcon title="paused" />;
+  const playing = useSelector((state) => state.player.isPlaying);
+  const playingTrack = useSelector((state) => state.player.current);
+  const playIcon = playing && playingTrack.id === id ? <PauseIcon title="playing" /> : <PlayingIcon title="paused" />;
 
   return (
     <div className={classes.track} id={id}>
       <img src={cover} alt="" />
-      <div className={classes.play_button} onClick={() => setPlaying((prev) => !prev)} title="playButton">
+      <div className={classes.play_button} onClick={onClickPlay} title="playButton">
 
         {playIcon}
       </div>

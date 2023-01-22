@@ -103,7 +103,6 @@ $ico_svg_color_h: white;
 
 #player>p {
     display: none;
-    font-size: 16;
     line-height: 40px;
     padding-left: 20px;
     margin-bottom: 10px;
@@ -148,6 +147,11 @@ $ico_svg_color_h: white;
 }
 
 #player-track-info p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 18px;
+    height: 40px;
     width: 100%;
     line-height: 40px;
 }
