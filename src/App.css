@@ -17,7 +17,10 @@ html::-webkit-scrollbar{
   background: linear-gradient(180deg, rgba(0, 15, 27, 100%) 0%, rgba(102, 138, 165, 100%) 100%, rgba(0, 0, 0, 100%) 0%);
   background-attachment: fixed;
   font-family: 'Inter', sans-serif;
-  padding-bottom:140px;
   height: auto !important;
   min-height: 100%;
+}
+
+#player-shadow{
+  height: 140px;
 }

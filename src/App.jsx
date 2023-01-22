@@ -7,6 +7,7 @@ import CollectionsPage from './pages/CollectionsPage';
 import ProfilePage from './pages/ProfilePage';
 import PlaylistPage from './pages/PlaylistPage';
 import EditPlaylistPage from './pages/EditPlaylistPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/playlist" element={<PlaylistPage />} />
           <Route path="/edit" element={<EditPlaylistPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
       </div>
     </BrowserRouter>
