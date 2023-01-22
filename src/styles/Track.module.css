@@ -3,6 +3,7 @@
     align-items: center;
     height: 80px;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .track > img {
@@ -65,9 +66,4 @@
 .duration {
     width: 89px;
     margin-left: 31px;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
 }

@@ -71,7 +71,7 @@
 }
 
 
-b {
+.container b {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -83,7 +83,7 @@ b {
     color: #FFFFFF;
 }
 
-p {
+.container p {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;

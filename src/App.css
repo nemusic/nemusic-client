@@ -24,3 +24,8 @@ html::-webkit-scrollbar{
 #player-shadow{
   height: 140px;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
