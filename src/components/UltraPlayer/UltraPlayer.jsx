@@ -58,11 +58,6 @@ function UltraPlayer() {
   };
 
   const showPlayList = () => {
-    if (playListShown) {
-      document.getElementById('player').classList.remove('shown');
-    } else {
-      document.getElementById('player').classList.add('shown');
-    }
     setPlayListShown(!playListShown);
   };
 
@@ -71,7 +66,7 @@ function UltraPlayer() {
   };
 
   return (
-    <div id="player">
+    <div id="player" className={playListShown ? 'shown' : ''}>
       <p>{playlistName}</p>
       <div id="playlist">
         {playlist.map((Track) => {
