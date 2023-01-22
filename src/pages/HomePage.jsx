@@ -5,11 +5,13 @@ import CardStack from '../components/CardStack';
 
 import Page from './Page';
 
+const API_URL = 'http://localhost:8080/api/home';
+
 function Home() {
   const [cards, setCards] = useState([]);
   const [tracks, setTracks] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:8080/api/home')
+    fetch(API_URL)
       .then((response) => response.json())
       .then((data) => {
         setCards(data.playlists);

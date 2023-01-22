@@ -9,7 +9,7 @@ import UltraPlayer from '../components/UltraPlayer';
 function Page({ children }) {
   return (
     <div>
-      <Header Header name="abobaaaaa" userAvatar="https://i.ibb.co/0jwh2XB/profile-img.png" />
+      <Header />
       <div className={classes.content}>
         {children}
       </div>

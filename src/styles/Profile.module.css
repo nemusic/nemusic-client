@@ -30,4 +30,5 @@
 .avatar {
   height: 392px;
   width: 392px;
+  border-radius: 50%;
 }

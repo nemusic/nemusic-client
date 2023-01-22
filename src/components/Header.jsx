@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import classes from '../styles/Header.module.css';
 import Logo from '../resources/main_logo.svg';
+import noUserIcon from '../resources/no_user.png';
 
-function Header({ name, userAvatar }) {
+import authHeader from '../services/auth-header';
+
+const API_URL = 'http://localhost:8080/api/user';
+
+function Header() {
+  const [user, setUser] = useState({});
+  useEffect(() => {
+    fetch(API_URL, { headers: authHeader() })
+      .then((response) => response.json())
+      .then((data) => {
+        setUser(data);
+      });
+  }, []);
+
   return (
     <header className={`${classes.header} ${classes.flex_container}`}>
       <div className={`${classes.logo} ${classes.flex_item}`}>
@@ -30,8 +44,8 @@ function Header({ name, userAvatar }) {
       </ul>
       <div className={`${classes.my_account} ${classes.flex_item}`}>
         <Link to="/profile">
-          <span className={classes.acc_name}>{name}</span>
-          <img src={userAvatar} alt="" className={classes.acc_photo} />
+          <span className={classes.acc_name}>{user.username ? user.username : ''}</span>
+          <img src={user.avatar ? user.avatar : noUserIcon} alt="" className={classes.acc_photo} />
         </Link>
       </div>
     </header>
