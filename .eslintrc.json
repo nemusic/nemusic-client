@@ -6,6 +6,10 @@
     ],
     "rules": {
       "no-unused-vars": "warn",
+      "no-param-reassign": "off",
+      "import/prefer-default-export": "off",
+      "arrow-body-style": "off",
+      "react/jsx-boolean-value": "off",
       "comma-dangle": ["error", "never"],
       "semi": ["warn", "always"],
       "import/order": ["warn", {
