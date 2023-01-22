@@ -8,7 +8,7 @@ import './UltraPlayer.scss';
 import {
   incremented,
   decremented,
-  indexSet,
+  trackChanged,
   trackLikeChanged
 } from '../../redux_features/player/player-slice';
 
@@ -23,13 +23,13 @@ import { ReactComponent as LikeMiniIcon } from '../../resources/like-mini.svg';
 import { ReactComponent as LikeMiniActiveIcon } from '../../resources/like-mini-active.svg';
 
 function UltraPlayer() {
+  const dispatch = useDispatch();
   const [playListShown, setPlayListShown] = useState(false);
-  const currentIndex = useSelector((state) => state.player.currentIndex);
   const playlist = useSelector((state) => state.player.playlist);
   const currentTrack = useSelector((state) => state.player.current);
   const playlistName = useSelector((state) => state.player.playlistName);
+
   const audio = document.getElementsByTagName('audio')[0];
-  const dispatch = useDispatch();
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleClickNext = () => {
@@ -41,8 +41,8 @@ function UltraPlayer() {
   };
 
   const handleClickTrack = (i) => {
-    if (i !== currentIndex) {
-      dispatch(indexSet(i));
+    if (i !== currentTrack.id) {
+      dispatch(trackChanged(i));
       setIsPlaying(true);
       audio.play();
       return;
@@ -74,14 +74,14 @@ function UltraPlayer() {
     <div id="player">
       <p>{playlistName}</p>
       <div id="playlist">
-        {playlist.map((Track, i) => {
+        {playlist.map((Track) => {
           return (
-            <div className="track-mini">
-              <button className="mini-play" type="button" onClick={handleClickTrack.bind(this, i)}>
-                {(i === currentIndex && isPlaying) ? <PauseMiniIcon /> : <PlayMiniIcon />}
+            <div className="track-mini" key={Track.id}>
+              <button className="mini-play" type="button" onClick={handleClickTrack.bind(this, Track.id)}>
+                {(Track.id === currentTrack.id && isPlaying) ? <PauseMiniIcon /> : <PlayMiniIcon />}
               </button>
               <p>{Track.title} - {Track.author}</p>
-              <button className="mini-like" type="button" onClick={handleLike.bind(this, i)}>
+              <button className="mini-like" type="button" onClick={handleLike.bind(this, Track.id)}>
                 {(Track.isFavorite) ? <LikeMiniActiveIcon /> : <LikeMiniIcon />}
               </button>
               <p>{Track.duration}</p>

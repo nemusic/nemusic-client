@@ -1,5 +1,6 @@
 const TrackSamples = [
   {
+    id: 0,
     title: 'Track 1',
     src: 'music/da.mp3',
     author: 'Author 1',
@@ -11,6 +12,7 @@ const TrackSamples = [
     isFavorite: true
   },
   {
+    id: 1,
     title: 'Track 2',
     src: 'music/jazz.mp3',
     author: 'Author 2',
@@ -22,6 +24,7 @@ const TrackSamples = [
     isFavorite: false
   },
   {
+    id: 2,
     title: 'Track 3',
     src: 'music/da.mp3',
     author: 'Author 3',
