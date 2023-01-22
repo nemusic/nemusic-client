@@ -1,12 +1,19 @@
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import UltraPlayer from '../../components/UltraPlayer/UltraPlayer';
 
+import AuthService from '../../services/AuthService';
+
 import classes from './Page.module.css';
 
 function Page({ children }) {
+  if (!AuthService.getCurrentUser()) {
+    return <Navigate to="/login" />;
+  }
+
   return (
     <div>
       <Header />
