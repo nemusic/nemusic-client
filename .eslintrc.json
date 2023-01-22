@@ -17,6 +17,21 @@
         "unknown", "parent", "sibling", "index", "object", "type"],
         "newlines-between": "always-and-inside-groups"
       }],
+      "jsx-a11y/label-has-associated-control": [
+        2,
+        {
+          "labelComponents": [
+            "FormLabel"
+          ],
+          "labelAttributes": [
+            "label"
+          ],
+          "controlComponents": [
+            "input"
+          ],
+          "depth": 1
+        }
+      ],
       "prefer-const": "warn",
       "react/jsx-one-expression-per-line": "off",
       "linebreak-style": "off",

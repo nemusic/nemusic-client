@@ -15,6 +15,7 @@ function Page({ children }) {
       </div>
       <Footer />
       <UltraPlayer />
+      <div id="player-shadow" />
     </div>
   );
 }
