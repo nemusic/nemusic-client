@@ -67,7 +67,9 @@
     width: 285px;
     height: 107px;
     padding-left: 9px;
+    padding-top: 20px;
 }
+
 
 b {
     font-family: 'Inter';
@@ -92,4 +94,6 @@ p {
     /* white */
 
     color: #FFFFFF;
+
+    padding-top: 20px;
 }
