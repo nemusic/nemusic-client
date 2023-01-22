@@ -8,12 +8,16 @@ html,body,#root{
   height: 100%;
 }
 
+html::-webkit-scrollbar{
+  display: none;
+}
+
 .App {
   color: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(0, 15, 27, 100%) 0%, rgba(102, 138, 165, 100%) 100%, rgba(0, 0, 0, 100%) 0%);
   background-attachment: fixed;
   font-family: 'Inter', sans-serif;
-  padding-bottom:100px;
+  padding-bottom:140px;
   height: auto !important;
   min-height: 100%;
 }
