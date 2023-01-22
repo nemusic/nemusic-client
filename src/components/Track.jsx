@@ -7,7 +7,8 @@ import FavoriteFilledIcon from '@mui/icons-material/Favorite';
 import classes from '../styles/Track.module.css';
 
 function Track({
-  title, author, authorUrl, albumTitle, albumCoverUrl, albumUrl, duration, isFavorite
+  // eslint-disable-next-line
+  id, title, authorName, authorUrl, album, cover, media, duration, isFavorite
 }) {
   const [favoriteState, setFavoriteState] = useState(isFavorite);
   const favoriteIcon = favoriteState ? <FavoriteFilledIcon title="inFavorite" /> : <FavoriteIcon title="notInFavorite" />;
@@ -16,9 +17,10 @@ function Track({
   const playIcon = playing ? <PauseIcon title="playing" /> : <PlayingIcon title="paused" />;
 
   return (
-    <div className={classes.track}>
-      <img src={albumCoverUrl} alt="" />
+    <div className={classes.track} id={id}>
+      <img src={cover} alt="" />
       <div className={classes.play_button} onClick={() => setPlaying((prev) => !prev)} title="playButton">
+
         {playIcon}
       </div>
 
@@ -27,12 +29,12 @@ function Track({
           {title}
         </div>
         <div className={classes.author}>
-          <a href={authorUrl}>{author}</a>
+          <a href={authorUrl}>{authorName}</a>
         </div>
       </div>
 
       <div className={classes.album_title}>
-        <a href={albumUrl}>{albumTitle}</a>
+        {album}
       </div>
 
       <div className={classes.favorite_icon} onClick={() => setFavoriteState((prev) => !prev)} title="addToFavorite">
