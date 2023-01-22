@@ -1,13 +1,15 @@
 import React from 'react';
 
+import Profile from '../components/Profile';
+
+import user from '../samples/UserSample';
+
 import Page from './Page';
 
 function ProfilePage() {
   return (
     <Page>
-      <div>
-        hello, this is Profile page
-      </div>
+      <Profile avatar={user.avatar} name={user.name} description={user.description} />
     </Page>
   );
 }
