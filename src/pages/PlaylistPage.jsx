@@ -1,11 +1,11 @@
 import React from 'react';
 
-import PlaylistHeader from '../components/PlaylistHeader';
-import TrackList from '../components/TrackList';
+import PlaylistHeader from '../components/PlaylistHeader/PlaylistHeader';
+import TrackList from '../components/TrackList/TrackList';
 
 import playlist from '../samples/playlistSample';
 
-import Page from './Page';
+import Page from './Page/Page';
 
 function PlaylistPage() {
   return (

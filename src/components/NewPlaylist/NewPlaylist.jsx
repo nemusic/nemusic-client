@@ -2,9 +2,9 @@ import React from 'react';
 
 import { CardActionArea } from '@mui/material';
 
-import classes from '../styles/NewPlaylist.module.css';
+import plus from '../../resources/add.png';
 
-import plus from '../resources/add.png';
+import classes from './NewPlaylist.module.css';
 
 export default function NewPlaylist() {
   return (

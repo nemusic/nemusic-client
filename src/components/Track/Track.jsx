@@ -4,7 +4,7 @@ import PauseIcon from '@mui/icons-material/Pause';
 import FavoriteIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteFilledIcon from '@mui/icons-material/Favorite';
 
-import classes from '../styles/Track.module.css';
+import classes from './Track.module.css';
 
 function Track({
   // eslint-disable-next-line

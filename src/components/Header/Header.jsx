@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import classes from '../styles/Header.module.css';
-import Logo from '../resources/main_logo.svg';
-import noUserIcon from '../resources/no_user.png';
+import Logo from '../../resources/main_logo.svg';
+import noUserIcon from '../../resources/no_user.png';
+import authHeader from '../../services/auth-header';
 
-import authHeader from '../services/auth-header';
+import classes from './Header.module.css';
 
 const API_URL = 'http://localhost:8080/api/user';
 

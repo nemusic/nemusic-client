@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
-import TrackList from '../components/TrackList';
-import CardStack from '../components/CardStack';
+import TrackList from '../components/TrackList/TrackList';
+import CardStack from '../components/CardStack/CardStack';
+import AuthService from '../services/AuthService';
 
-import Page from './Page';
+import Page from './Page/Page';
 
 const API_URL = 'http://localhost:8080/api/home';
 
 function Home() {
+  AuthService.login('alefunt', 'password');
   const [cards, setCards] = useState([]);
   const [tracks, setTracks] = useState([]);
   useEffect(() => {

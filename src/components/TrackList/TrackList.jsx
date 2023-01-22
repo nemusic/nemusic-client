@@ -1,8 +1,8 @@
 import React from 'react';
 
-import classes from '../styles/TrackList.module.css';
+import Track from '../Track/Track';
 
-import Track from './Track';
+import classes from './TrackList.module.css';
 
 function TrackList({ tracks }) {
   return (

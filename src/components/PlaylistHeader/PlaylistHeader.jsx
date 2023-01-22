@@ -1,8 +1,8 @@
 import React from 'react';
 
-import classes from '../styles/PlaylistHeader.module.css';
+import editIcon from '../../resources/edit_icon.svg';
 
-import editIcon from '../resources/edit_icon.svg';
+import classes from './PlaylistHeader.module.css';
 
 function PlaylistHeader({ headerInfo }) {
   return (

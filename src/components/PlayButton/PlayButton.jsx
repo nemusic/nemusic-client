@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
 import PauseRoundedIcon from '@mui/icons-material/PauseRounded';
 
-import classes from '../styles/PlayButton.module.css';
+import classes from './PlayButton.module.css';
 
 export default function PlayButton() {
   const [playing, setPlaying] = useState(true);

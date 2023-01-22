@@ -1,10 +1,10 @@
 import React from 'react';
 
-import classes from '../styles/Page.module.css';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import UltraPlayer from '../../components/UltraPlayer/UltraPlayer';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import UltraPlayer from '../components/UltraPlayer/UltraPlayer';
+import classes from './Page.module.css';
 
 function Page({ children }) {
   return (

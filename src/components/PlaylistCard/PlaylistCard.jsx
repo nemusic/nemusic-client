@@ -1,8 +1,8 @@
 import React from 'react';
 
-import classes from '../styles/CardWoMui.module.css';
+import PlayButton from '../PlayButton/PlayButton';
 
-import PlayButton from './PlayButton';
+import classes from './PlaylistCard.module.css';
 
 export default function CardWoMui({
   id, title, description, cover

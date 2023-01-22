@@ -1,10 +1,10 @@
 import React from 'react';
 import { Grid } from '@mui/material';
 
-import classes from '../styles/CardStack.module.css';
+import CardWoMui from '../PlaylistCard/PlaylistCard';
+import NewPlaylist from '../NewPlaylist/NewPlaylist';
 
-import CardWoMui from './CardWoMui';
-import NewPlaylist from './NewPlaylist';
+import classes from './CardStack.module.css';
 
 function CardStack({ cards, writable }) {
   return (

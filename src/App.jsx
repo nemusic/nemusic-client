@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
-import CollectionsPage from './pages/CollectionsPage';
+import CollectionsPage from './pages/CollectionsPage/CollectionsPage';
 import ProfilePage from './pages/ProfilePage';
 import PlaylistPage from './pages/PlaylistPage';
 import EditPlaylistPage from './pages/EditPlaylistPage';

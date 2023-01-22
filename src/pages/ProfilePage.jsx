@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import Profile from '../components/Profile';
+import Profile from '../components/Profile/Profile';
 import authHeader from '../services/auth-header';
 
-import Page from './Page';
+import Page from './Page/Page';
 
 const API_URL = 'http://localhost:8080/api/user';
 

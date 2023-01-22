@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import classes from '../styles/Profile.module.css';
-import editIcon from '../resources/edit_icon.svg';
+import editIcon from '../../resources/edit_icon.svg';
+
+import classes from './Profile.module.css';
 
 function Profile({ avatar, name, description }) {
   return (

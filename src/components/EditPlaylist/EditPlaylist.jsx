@@ -1,7 +1,8 @@
 import React from 'react';
 
-import classes from '../styles/EditPlaylist.module.css';
-import addPhoto from '../resources/add_photo.svg';
+import addPhoto from '../../resources/add_photo.svg';
+
+import classes from './EditPlaylist.module.css';
 
 function EditPlaylist() {
   return (
