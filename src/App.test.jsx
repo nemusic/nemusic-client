@@ -1,19 +1,19 @@
 import React from 'react';
 
 import {
-  screen, fireEvent, render, queryByAttribute
+  screen, fireEvent, render
 } from '@testing-library/react';
 
 import { renderToString } from 'react-dom/server';
 
 import '@testing-library/jest-dom/extend-expect';
 
-import Track from './components/Track';
-import CardWoMui from './components/CardWoMui';
-import TrackList from './components/TrackList';
-import CardStack from './components/CardStack';
-import PlaylistHeader from './components/PlaylistHeader';
-import PlayButton from './components/PlayButton';
+import Track from './components/Track/Track';
+import CardWoMui from './components/PlaylistCard/PlaylistCard';
+import TrackList from './components/TrackList/TrackList';
+import CardStack from './components/CardStack/CardStack';
+import PlaylistHeader from './components/PlaylistHeader/PlaylistHeader';
+import PlayButton from './components/PlayButton/PlayButton';
 
 import cards from './samples/CardSamples';
 import playlist from './samples/playlistSample';

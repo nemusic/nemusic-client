@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NewPlaylist from '../components/NewPlaylist';
+import NewPlaylist from '../components/NewPlaylist/NewPlaylist';
 
 export default {
   title: 'Новый плейлист',

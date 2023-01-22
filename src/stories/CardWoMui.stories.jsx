@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardWoMui from '../components/CardWoMui';
+import CardWoMui from '../components/PlaylistCard/PlaylistCard';
 
 export default {
   title: 'Карточка плейлиста без помощи Mui',

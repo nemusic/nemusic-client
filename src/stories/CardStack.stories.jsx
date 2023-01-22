@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CardStack from '../components/CardStack';
+import CardStack from '../components/CardStack/CardStack';
 
 export default {
   title: 'Стек карт',
