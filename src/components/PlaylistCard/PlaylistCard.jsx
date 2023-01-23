@@ -9,7 +9,7 @@ export default function CardWoMui({
   id, title, description, cover, onClickPlay
 }) {
   return (
-    <Link to="/playlist">
+    <Link to="/playlist" state={{ playlistId: id }}>
       <div className={classes.cardOutline} id={id}>
         <div className={classes.card}>
           <div className={classes.imageContainer} style={{ backgroundImage: `url(${cover})` }}>

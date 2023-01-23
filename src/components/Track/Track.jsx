@@ -22,8 +22,7 @@ function Track({
   return (
     <div className={classes.track} id={id}>
       <img src={cover} alt="" />
-      <div className={classes.play_button} onClick={onClickPlay} title="playButton">
-
+      <div className={classes.play_button} onClick={onClickPlay.bind(this, id)} title="playButton">
         {playIcon}
       </div>
 

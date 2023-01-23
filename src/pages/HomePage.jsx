@@ -6,6 +6,7 @@ import CardStack from '../components/CardStack/CardStack';
 import AuthService from '../services/AuthService';
 
 import {
+  isPlayingChanged,
   playlistChanged,
   trackChanged
 } from '../redux_features/player/player-slice';
@@ -16,9 +17,11 @@ const API_URL = 'http://localhost:8080/api/';
 
 function Home() {
   const dispatch = useDispatch();
-  const currentPlaylistId = useSelector((state) => state.player.playlistId);
+  const currentPlaylistId = useSelector((state) => state.player.playlist.id);
+  const currentTrack = useSelector((state) => state.player.current);
+  const isPlaying = useSelector((state) => state.player.isPlaying);
 
-  AuthService.login('alefunt', 'password');
+  // AuthService.login('alefunt', 'password');
   const [cards, setCards] = useState([]);
   const [tracks, setTracks] = useState([]);
   useEffect(() => {
@@ -41,7 +44,11 @@ function Home() {
         tracks: tmp
       }));
     }
-    dispatch(trackChanged(trackId));
+    if (trackId !== currentTrack.id) {
+      dispatch(trackChanged(trackId));
+    } else {
+      dispatch(isPlayingChanged(!isPlaying));
+    }
   };
 
   const cardOnClickPlay = (playlistId) => {
