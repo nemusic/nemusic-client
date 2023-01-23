@@ -49,9 +49,11 @@ function PlaylistPage() {
     <Page>
       <div>
         <PlaylistHeader
+          id={playlist.id}
           cover={playlist.cover}
           title={playlist.title}
           description={playlist.description}
+          liked={playlist.liked}
         />
         <TrackList tracks={playlist.tracks} onClickPlay={trackOnClickPlay} />
       </div>

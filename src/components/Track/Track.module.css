@@ -59,8 +59,12 @@
     text-decoration: underline;
 }
 
+.download_icon {
+    margin-left: 130px;
+}
+
 .favorite_icon {
-    margin-left: 174px;
+    margin-left: 20px;
 }
 
 .duration {

@@ -27,6 +27,14 @@
   margin-bottom: 40px;
 }
 
+.edit img {
+  cursor: pointer;
+}
+
+.edit input {
+  display: none;
+}
+
 .avatar {
   height: 392px;
   width: 392px;
