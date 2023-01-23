@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import TrackList from '../components/TrackList/TrackList';
 import CardStack from '../components/CardStack/CardStack';
+import authHeader from '../services/auth-header';
 
 import Page from './Page/Page';
 
@@ -11,7 +12,7 @@ function Home() {
   const [cards, setCards] = useState([]);
   const [tracks, setTracks] = useState([]);
   useEffect(() => {
-    fetch(API_URL)
+    fetch(API_URL, { headers: authHeader() })
       .then((response) => response.json())
       .then((data) => {
         setCards(data.playlists);
