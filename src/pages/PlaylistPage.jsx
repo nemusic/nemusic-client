@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+
 import authHeader from '../services/auth-header';
 
 import PlaylistHeader from '../components/PlaylistHeader/PlaylistHeader';
@@ -29,9 +30,7 @@ function PlaylistPage() {
     fetch(API_URL.concat('playlist/').concat(playlistId), { headers: authHeader() })
       .then((response) => response.json())
       .then((data) => {
-        const tmp = data;
-        setPlaylist(tmp);
-        return tmp;
+        setPlaylist(data);
       });
   }, [playlistId]);
 

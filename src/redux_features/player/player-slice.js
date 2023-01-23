@@ -50,8 +50,8 @@ const playerSlice = createSlice({
     },
     trackLikeChanged(state, action) {
       const index = findIndexOf(state, action.payload);
-      const newVal = !state.playlist.tracks[index].isFavorite;
-      state.playlist.tracks[index].isFavorite = newVal;
+      const newVal = !state.playlist.tracks[index].is_liked;
+      state.playlist.tracks[index].is_liked = newVal;
     },
     playlistChanged(state, action) {
       state.playlist = action.payload;
