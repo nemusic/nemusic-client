@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import PlayButton from '../PlayButton/PlayButton';
 
 import classes from './PlaylistCard.module.css';
 
 export default function CardWoMui({
-  id, title, description, cover
+  id, title, description, cover, onClickPlay
 }) {
   return (
-    <a href="/playlist">
+    <Link to="/playlist" state={{ playlistId: id }}>
       <div className={classes.cardOutline} id={id}>
         <div className={classes.card}>
           <div className={classes.imageContainer} style={{ backgroundImage: `url(${cover})` }}>
             <div className={classes.blackBox}>
               <div className={classes.playButton}>
-                <PlayButton />
+                <PlayButton playlistId={id} onClickPlay={onClickPlay} />
               </div>
             </div>
           </div>
@@ -24,6 +25,6 @@ export default function CardWoMui({
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

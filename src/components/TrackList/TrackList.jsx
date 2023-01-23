@@ -4,7 +4,7 @@ import Track from '../Track/Track';
 
 import classes from './TrackList.module.css';
 
-function TrackList({ tracks }) {
+function TrackList({ tracks, onClickPlay }) {
   return (
     <div className={classes.track_list}>
       <div className={classes.header}>
@@ -29,6 +29,7 @@ function TrackList({ tracks }) {
           media={track.media}
           duration={track.duration}
           isFavorite={track.isFavorite}
+          onClickPlay={onClickPlay}
         />
       ))}
     </div>
