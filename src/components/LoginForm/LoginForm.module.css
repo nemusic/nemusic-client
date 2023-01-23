@@ -1,0 +1,101 @@
+.pagecontainer{
+    padding: 0;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.greeting{
+    height: 500px;
+    width: 450px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    border:rgba(0, 0, 0, 0) 0.1px solid;
+    background-image: url("http://localhost:8080/data/static/bg.png");
+    background-size: cover;
+    opacity: 0.8;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.logo{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    width: 140px;
+    height: 100px;
+    padding: 0;
+}
+
+.logo h1{
+    font-family: 'Inter';
+}
+
+.container{
+    padding: 0;
+    height: 510px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: rgba(0, 0, 0, 0) 0.1px solid;
+    background-color:  #668AA5;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container form{
+    min-width: 300px;
+}
+
+.container form>div{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.container legend{
+    font-size: 22px;
+}
+
+.container div{
+    margin-top: 20px;
+}
+
+.container label{
+    font-size: 22px;
+}
+
+.container button{
+    font-size: 22px;
+    display: block;
+    color: #668AA5;
+    margin: 30px auto;
+    background-color: #1E2F3C;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.container button:hover{
+    background-color: #243847;
+}
+
+.container input[type="text"],
+.container input[type="password"] {
+  border: 1px solid rgba(191, 216, 227, .8);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 110%;
+  width: 100%;
+}

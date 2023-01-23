@@ -1,0 +1,73 @@
+.track {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.track > img {
+    height: 100%;
+}
+
+.play_button {
+    position: absolute;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+    backdrop-filter: brightness(50%);
+    opacity: 0;
+}
+
+.play_button > svg {
+    font-size: 46px;
+}
+
+.play_button:hover {
+    opacity: 1;
+}
+
+.meta_data {
+    width: 205px;
+    margin-left: 22px;
+}
+
+.track_title {
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.author {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    color: #C9C9C9;
+}
+
+.author:hover {
+    text-decoration: underline;
+}
+
+.album_title {
+    width: 183px;
+    padding-left: 405px;
+}
+
+.album_title:hover {
+    text-decoration: underline;
+}
+
+.download_icon {
+    margin-left: 130px;
+}
+
+.favorite_icon {
+    margin-left: 20px;
+}
+
+.duration {
+    width: 89px;
+    margin-left: 31px;
+}

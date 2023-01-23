@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {    
+  margin: 0;
+}
+
+html,body,#root{
+  height: 100%;
+}
+
+html::-webkit-scrollbar{
+  display: none;
+}
+
+.App {
+  color: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(0, 15, 27, 100%) 0%, rgba(102, 138, 165, 100%) 100%, rgba(0, 0, 0, 100%) 0%);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+  height: auto !important;
+  min-height: 100%;
+}
+
+#player-shadow{
+  height: 140px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
