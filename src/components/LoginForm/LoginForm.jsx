@@ -25,7 +25,7 @@ function LoginForm() {
       </div>
       <div className={classes.container}>
         <div className={classes.logo}>
-          <img src="https://lh3.googleusercontent.com/pw/AL9nZEUn-kXv24bd6II5T_dlWHGuaeuDAQDd_hTVZJ9ojhSXJWEPDzH71sE7MJy808_rfoEe-xz9ghqRijUF7eVVwbrEzaoM6zkzf3UGYDLQZ2fI_RqjxIY_L2AazK66EYDr3-PgOC8xdRe1thlL019_zoAs=w128-h80-no?authuser=0" alt="logo" />
+          <img src="http://localhost:8080/data/static/logo.png" alt="logo" />
           <h1>NeoMusic</h1>
         </div>
         <form onSubmit={handleSubmit}>

@@ -16,7 +16,7 @@
     align-items: center;
     padding: 5px;
     border:rgba(0, 0, 0, 0) 0.1px solid;
-    background-image: url("https://lh3.googleusercontent.com/pw/AL9nZEXxIhKRwnUdYr1HvT6xWCkddbE3ZOCagWo5mNHXMsnd_nEGA5UCLN06fEM89YHbR3fFCXvvbZEqPnn8VQGucVEvfaWrIYASOl4EiZBVKS5_v8iyMonkJLjc1VSbOLoCCRbSAO-tKILYNDtjDCU_VM8c=s285-no?authuser=0");
+    background-image: url("http://localhost:8080/data/static/bg.png");
     background-size: cover;
     opacity: 0.8;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
