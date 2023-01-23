@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Paper from '@mui/material/Paper';
 
 import AuthService from '../../services/AuthService';
 
