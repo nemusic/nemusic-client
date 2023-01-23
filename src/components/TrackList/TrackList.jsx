@@ -23,12 +23,11 @@ function TrackList({ tracks, onClickPlay }) {
           id={track.id}
           title={track.title}
           authorName={track.author_name}
-          // authorUrl=
           album={track.album}
           cover={track.cover}
           media={track.media}
           duration={track.duration}
-          isFavorite={track.isFavorite}
+          isFavorite={track.is_liked}
           onClickPlay={onClickPlay}
         />
       ))}

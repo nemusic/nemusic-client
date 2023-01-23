@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import PlayingIcon from '@mui/icons-material/PlayArrow';
@@ -7,7 +7,11 @@ import FavoriteIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteFilledIcon from '@mui/icons-material/Favorite';
 import DownloadIcon from '@mui/icons-material/DownloadOutlined';
 
+import authHeader from '../../services/auth-header';
+
 import classes from './Track.module.css';
+
+const API_URL = 'http://localhost:8080/api/';
 
 function Track({
   // eslint-disable-next-line
@@ -19,6 +23,10 @@ function Track({
   const playing = useSelector((state) => state.player.isPlaying);
   const playingTrack = useSelector((state) => state.player.current);
   const playIcon = playing && playingTrack.id === id ? <PauseIcon title="playing" /> : <PlayingIcon title="paused" />;
+
+  useEffect(() => {
+    fetch(API_URL.concat(`user/likes?id=${id}&operation=${favoriteState ? 'like' : 'dislike'}`), { headers: authHeader(), method: 'POST' });
+  }, [id, favoriteState]);
 
   return (
     <div className={classes.track} id={id}>

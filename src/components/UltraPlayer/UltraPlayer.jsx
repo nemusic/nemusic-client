@@ -22,6 +22,9 @@ import { ReactComponent as PlayMiniIcon } from '../../resources/play-mini.svg';
 import { ReactComponent as PauseMiniIcon } from '../../resources/pause-mini.svg';
 import { ReactComponent as LikeMiniIcon } from '../../resources/like-mini.svg';
 import { ReactComponent as LikeMiniActiveIcon } from '../../resources/like-mini-active.svg';
+import authHeader from '../../services/auth-header';
+
+const API_URL = 'http://localhost:8080/api/';
 
 function UltraPlayer() {
   const dispatch = useDispatch();
@@ -71,8 +74,9 @@ function UltraPlayer() {
     setPlayListShown(!playListShown);
   };
 
-  const handleLike = (i) => {
-    dispatch(trackLikeChanged(i));
+  const handleLike = (id, isLiked) => {
+    dispatch(trackLikeChanged(id));
+    fetch(API_URL.concat(`user/likes?id=${id}&operation=${!isLiked ? 'like' : 'dislike'}`), { headers: authHeader(), method: 'POST' });
   };
 
   return (
@@ -89,8 +93,8 @@ function UltraPlayer() {
                 ) ? <PauseMiniIcon /> : <PlayMiniIcon />}
               </button>
               <p>{Track.title} - {Track.author_name}</p>
-              <button className="mini-like" type="button" onClick={handleLike.bind(this, Track.id)}>
-                {(Track.isFavorite) ? <LikeMiniActiveIcon /> : <LikeMiniIcon />}
+              <button className="mini-like" type="button" onClick={handleLike.bind(this, Track.id, Track.is_liked)}>
+                {(Track.is_liked) ? <LikeMiniActiveIcon /> : <LikeMiniIcon />}
               </button>
               <p>{Track.duration}</p>
             </div>
