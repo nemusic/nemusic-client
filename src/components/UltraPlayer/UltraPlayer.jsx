@@ -76,7 +76,7 @@ function UltraPlayer() {
   };
 
   return (
-    <div id="player" className={playListShown ? 'shown' : ''}>
+    <div id="player" className={(playListShown ? 'shown' : '').concat(window.location.pathname === '/login' ? 'hidden' : '')}>
       <p>{playlist.title}</p>
       <div id="playlist">
         {playlist.tracks.map((Track) => {

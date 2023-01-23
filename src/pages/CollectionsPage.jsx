@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import CardStack from '../../components/CardStack/CardStack';
-import authHeader from '../../services/auth-header';
-import Page from '../Page/Page';
+import CardStack from '../components/CardStack/CardStack';
+import authHeader from '../services/auth-header';
 
-import classes from './CollectionsPage.module.css';
+import Page from './Page/Page';
 
 const API_URL = 'http://localhost:8080/api/user/collections';
 
@@ -21,9 +20,7 @@ function CollectionsPage() {
   return (
     <Page>
       <div>
-        <div className={classes.collections_header}>
-          Коллекции
-        </div>
+        <h1>Коллекции</h1>
         <CardStack cards={cards} writable />
       </div>
     </Page>

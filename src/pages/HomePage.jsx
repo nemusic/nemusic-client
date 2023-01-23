@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import TrackList from '../components/TrackList/TrackList';
 import CardStack from '../components/CardStack/CardStack';
-import AuthService from '../services/AuthService';
+import authHeader from '../services/auth-header';
 
 import {
   isPlayingChanged,
@@ -21,11 +21,10 @@ function Home() {
   const currentTrack = useSelector((state) => state.player.current);
   const isPlaying = useSelector((state) => state.player.isPlaying);
 
-  // AuthService.login('alefunt', 'password');
   const [cards, setCards] = useState([]);
   const [tracks, setTracks] = useState([]);
   useEffect(() => {
-    fetch(API_URL.concat('home'))
+    fetch(API_URL.concat('home'), { headers: authHeader() })
       .then((response) => response.json())
       .then((data) => {
         setCards(data.playlists);
@@ -53,7 +52,7 @@ function Home() {
 
   const cardOnClickPlay = (playlistId) => {
     if (playlistId !== currentPlaylistId) {
-      fetch(API_URL.concat('playlist/').concat(playlistId))
+      fetch(API_URL.concat('playlist/').concat(playlistId), { headers: authHeader() })
         .then((response) => response.json())
         .then((data) => {
           dispatch(playlistChanged(data));

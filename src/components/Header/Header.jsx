@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Logo from '../../resources/main_logo.svg';
-import noUserIcon from '../../resources/no_user.png';
 import authHeader from '../../services/auth-header';
 
 import classes from './Header.module.css';
@@ -21,31 +20,39 @@ function Header() {
 
   return (
     <header className={`${classes.header} ${classes.flex_container}`}>
-      <div className={`${classes.logo} ${classes.flex_item}`}>
-        <img src={Logo} alt="" className={classes.logo_icon} />
-        <span className={classes.logo_text}>NeoMusic</span>
-      </div>
+      <Link to="/">
+        <div className={`${classes.logo} ${classes.flex_item}`}>
+          <img src={Logo} alt="" className={classes.logo_icon} />
+          <span className={classes.logo_text}>NeoMusic</span>
+        </div>
+      </Link>
       <ul className={`${classes.nav_list} ${classes.flex_item}`}>
         <li className={classes.nav_item}>
-          <a href="/collections" className={classes.nav_link}>
-            collections
-          </a>
+          <Link to="/collections">
+            <span className={classes.nav_link}>
+              collections
+            </span>
+          </Link>
         </li>
         <li className={classes.nav_item}>
-          <a href="/likes" className={classes.nav_link}>
-            likes
-          </a>
+          <Link to="/likes">
+            <span className={classes.nav_link}>
+              likes
+            </span>
+          </Link>
         </li>
         <li className={classes.nav_item}>
-          <a href="/authors" className={classes.nav_link}>
-            authors
-          </a>
+          <Link to="/logout">
+            <span className={classes.nav_link}>
+              logout
+            </span>
+          </Link>
         </li>
       </ul>
       <div className={`${classes.my_account} ${classes.flex_item}`}>
         <Link to="/profile">
-          <span className={classes.acc_name}>{user.username ? user.username : ''}</span>
-          <img src={user.avatar ? user.avatar : noUserIcon} alt="" className={classes.acc_photo} />
+          <span className={classes.acc_name}>{user.username}</span>
+          <img src={user.avatar} alt="" className={classes.acc_photo} />
         </Link>
       </div>
     </header>

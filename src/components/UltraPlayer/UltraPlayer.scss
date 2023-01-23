@@ -91,6 +91,10 @@ $ico_svg_color_h: white;
     transition: height 200ms ease-out;
 }
 
+#player.hidden{
+    display: none;
+}
+
 #player.shown {
     background: #204c6b;
     height: 500px;
