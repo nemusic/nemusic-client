@@ -5,6 +5,7 @@ import PlayingIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
 import FavoriteIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteFilledIcon from '@mui/icons-material/Favorite';
+import DownloadIcon from '@mui/icons-material/DownloadOutlined';
 
 import classes from './Track.module.css';
 
@@ -38,6 +39,12 @@ function Track({
       <div className={classes.album_title}>
         {album}
       </div>
+
+      <a href={media} download="music">
+        <div className={classes.download_icon}>
+          <DownloadIcon />
+        </div>
+      </a>
 
       <div className={classes.favorite_icon} onClick={() => setFavoriteState((prev) => !prev)} title="addToFavorite">
         {favoriteIcon}
